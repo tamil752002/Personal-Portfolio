@@ -9,8 +9,28 @@
   }
   .mainContent{
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    width: 50%;
     justify-content: center;
+    align-items: center;
+    height: 700px;
+    font-weight: 700;
+
+    padding-left: 40px;
+    
     
   }
-  
+
+  .Name{
+        font-size: 40px;
+        
+
+  }
+  .imageDiv{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+
+  }
