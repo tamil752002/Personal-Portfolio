@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-card">
           <a
-            href="https://www.linkedin.com/in/your-linkedin-profile"
+            href="https://www.linkedin.com/in/tamilselvan-ravichandran-376649258/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -19,7 +19,7 @@ const Contact = () => {
         </div>
         <div className="contact-card">
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/tamil752002"
             target="_blank"
             rel="noopener noreferrer"
           >
