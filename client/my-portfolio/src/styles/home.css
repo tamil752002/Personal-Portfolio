@@ -2,9 +2,13 @@
     display: flex;
     align-items: center;       /* Vertically centers the content */
     width: 100%;               /* Corrected 'Width' to 'width' */
-    justify-content: space-between  
+    justify-content: space-between;
+    background-color: black;
     
-    
+  color: white;
+  ;
+
+  
 
   }
   .mainContent{
@@ -21,10 +25,19 @@
     
   }
 
-  .Name{
-        font-size: 40px;
-        
-
+  .Name {
+    font-size: 40px;
+    animation: bounce 2s infinite; /* Bounce animation with infinite loop */
+  }
+  
+  /* Bounce Animation for Text */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
   .imageDiv{
     display: flex;
