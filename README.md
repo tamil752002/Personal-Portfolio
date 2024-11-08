@@ -11,4 +11,5 @@ What I Do
 
 🤖 AI Chatbots & Voice Assistants: Recently, I've been exploring voice-enabled chatbots and speech-to-text applications to enhance customer support experiences.
 
-💡 Algorithmic Trading: I'm currently learning about the financial markets and developing a full-stack algorithmic trading bot to automate trading strategies.
+💡 Algorithmic Trading: I'm currently learning about the financial markets and developing a full-stack algorithmic trading bot to automate trading strategies
+.
