@@ -6,7 +6,7 @@ const Home = () => {
     <div  className='homemasterDiv'>
         <div className='mainContent'>
           <div className='Name' > 👋 Hi, I'm Tamilselvan   </div> 
-         <div>Full stack Developer</div>
+         <div>Full stack Developer !</div>
  
         </div>
         <div  className='imageDiv'>
