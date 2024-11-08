@@ -3,7 +3,7 @@ import "../styles/home.css"
 import  mYImg from "../assets/backgrdimg.jpg"
 const Home = () => {
   return (
-    <div  className='homemasterDiv'>
+    <div  id="Home" className='homemasterDiv'>
         <div className='mainContent'>
           <div className='Name' > 👋 Hi, I'm Tamilselvan   </div> 
          <div>Full stack Developer !</div>

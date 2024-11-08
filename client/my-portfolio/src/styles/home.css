@@ -2,7 +2,11 @@
     display: flex;
     align-items: center;       /* Vertically centers the content */
     width: 100%;               /* Corrected 'Width' to 'width' */
-    justify-content: space-between  
+    justify-content: space-between;
+    background-color: black;
+    
+  color: white;
+
     
     
 
