@@ -1,136 +1,158 @@
 .homemasterDiv {
-    display: flex;
-    align-items: center;       /* Vertically centers the content */
-    width: 100%;               /* Corrected 'Width' to 'width' */
-    justify-content: space-between;
-    background-color: black;
-    color: white;
-  ;
-
-  
-
-  }
-  .mainContent{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    font-weight: 700;
-    gap: 1rem;
-    padding-left: 40px;
-    
-    
-  }
-
-  .Name {
-    font-size: 40px;
-    animation: bounce 2s infinite; /* Bounce animation with infinite loop */
-  }
-
-  
-@media (max-width: 480px) {   /* For mobile screens */
-  .Name {
-    font-size: 18px;          /* Even smaller font size for very small screens */
-    padding: 0.6rem;          /* Adjust padding for smaller screens */
-    text-align: center;       /* Center text */
-  }
-
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  width: 100%; /* Corrected 'Width' to 'width' */
+  justify-content: space-between;
+  background-color: black;
+  color: white;
 }
-  /* Bounce Animation for Text */
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  font-weight: 700;
+  gap: 1rem;
+  padding-left: 40px;
+}
+
+.Name {
+  font-size: 40px;
+  animation: bounce 2s infinite; /* Bounce animation with infinite loop */
+}
+
+@media (max-width: 480px) {
+  /* For mobile screens */
+  .Name {
+    font-size: 18px; /* Even smaller font size for very small screens */
+    padding: 0.6rem; /* Adjust padding for smaller screens */
+    text-align: center; /* Center text */
   }
-  .imageDiv{
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-
+}
+/* Bounce Animation for Text */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-
-  .backgroundImage{
-
-      max-width: 100%;
-      height: auto;
-    
-    
+  50% {
+    transform: translateY(-20px);
   }
-
-
-  /* From Uiverse.io by Randdose */ 
-.resume {
-  all: unset;
+}
+.imageDiv {
   display: flex;
   align-items: center;
-  position: relative;
-  padding: 1rem 1.6rem 1rem 1.4rem;
-  border: mediumspringgreen solid 0.15em;
-  border-radius: 2.25em;
-  color: mediumspringgreen;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 1rem;
+  box-shadow:
+    rgba(240, 46, 170, 0.4) 5px 5px,
+    rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px,
+    rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.backgroundImage {
+  max-width: 100%;
+  height: auto;
+}
+
+/* From Uiverse.io by Randdose */
+.download-btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
   cursor: pointer;
-  overflow: hidden;
-  transition: border 300ms, color 300ms;
-  -webkit-user-select: none;
-  user-select: none;
-  width: 3rem;
-  height: 1rem;
+  /* use position: relative; so that BG is only for .download-btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
 }
 
-.resume p {
-  z-index: 1;
-}
-
-.resume:hover {
-  color: #212121;
-}
-
-.resume:active {
-  border-color: teal;
-}
-
-.resume::after, .resume::before {
-  content: "";
+.download-btn::after,
+.download-btn::before {
+  content: '';
   position: absolute;
-  width: 8em;
-  aspect-ratio: 1;
-  background: mediumspringgreen;
-  opacity: 50%;
-  border-radius: 50%;
-  transition: transform 500ms, background 300ms;
+  inset: 0;
 }
 
-.resume::before {
-  left: 0;
-  transform: translateX(-8em);
+.download-btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
 }
 
-.resume::after {
-  right: 0;
-  transform: translateX(8em);
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
 }
 
-.resume:hover:before {
-  transform: translateX(-1em);
+.download-btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
 }
 
-.resume:hover:after {
-  transform: translateX(1em);
+.download-btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
 }
 
-.resume:active:before,
-.resume:active:after {
-  background: teal;
-}
-
-.download-btn{
-  color: aliceblue;
+.download-btn:where(:hover, :focus) {
+  color: #fff;
 }

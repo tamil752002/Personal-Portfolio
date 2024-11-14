@@ -11,7 +11,7 @@ export const Navbar = () => {
   };
 
   // Array of section names
-  const sections = ['Home','about', 'projects', 'skills', 'contact'];
+  const sections = ['Home', 'about', 'projects', 'skills', 'contact'];
 
   return (
     <div className="navbardiv">
