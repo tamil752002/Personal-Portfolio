@@ -1,25 +1,15 @@
 import React from 'react';
 import '../styles/projects.css';
+import chatimg from "../assets/Chat.png"
 
 const projectsData = [
   {
     id: 1,
-    title: 'Project One',
-    description: 'A brief description of Project One.',
-    imageUrl: 'https://via.placeholder.com/150', // Replace with your image URL
-  },
-  {
-    id: 2,
-    title: 'Project Two',
-    description: 'A brief description of Project Two.',
-    imageUrl: 'https://via.placeholder.com/150',
-  },
-  {
-    id: 3,
-    title: 'Project Three',
-    description: 'A brief description of Project Three.',
-    imageUrl: 'https://via.placeholder.com/150',
-  },
+    title: 'Chat Application',
+    description: 'coming soon !',
+    imageUrl: '', // Replace with your image URL
+  }
+
 ];
 
 const Projects = () => {
@@ -30,7 +20,7 @@ const Projects = () => {
         {projectsData.map((project) => (
           <div key={project.id} className="project-card">
             <img
-              src={project.imageUrl}
+              src={chatimg}
               alt={project.title}
               className="project-image"
             />

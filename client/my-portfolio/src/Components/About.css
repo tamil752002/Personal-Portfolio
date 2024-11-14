@@ -1,0 +1,65 @@
+/* About.css */
+
+.about-container {
+    background-color: #ffffff;
+    padding: 54px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .about-heading {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fade-in 0.8s forwards;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about-item {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .about-item:hover {
+    background-color: #e2e2e2;
+  }
+  
+  .sub-heading {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .about-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Animations */
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fade-in 0.8s forwards;
+  }
+  
