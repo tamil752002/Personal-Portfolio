@@ -4,8 +4,7 @@
     width: 100%;               /* Corrected 'Width' to 'width' */
     justify-content: space-between;
     background-color: black;
-    
-  color: white;
+    color: white;
   ;
 
   
@@ -19,7 +18,7 @@
     align-items: center;
     height: 700px;
     font-weight: 700;
-
+    gap: 1rem;
     padding-left: 40px;
     
     
@@ -29,7 +28,16 @@
     font-size: 40px;
     animation: bounce 2s infinite; /* Bounce animation with infinite loop */
   }
+
   
+@media (max-width: 480px) {   /* For mobile screens */
+  .Name {
+    font-size: 18px;          /* Even smaller font size for very small screens */
+    padding: 0.6rem;          /* Adjust padding for smaller screens */
+    text-align: center;       /* Center text */
+  }
+
+}
   /* Bounce Animation for Text */
   @keyframes bounce {
     0%, 100% {
@@ -43,7 +51,86 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 
   }
+
+  .backgroundImage{
+
+      max-width: 100%;
+      height: auto;
+    
+    
+  }
+
+
+  /* From Uiverse.io by Randdose */ 
+.resume {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1rem 1.6rem 1rem 1.4rem;
+  border: mediumspringgreen solid 0.15em;
+  border-radius: 2.25em;
+  color: mediumspringgreen;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 3rem;
+  height: 1rem;
+}
+
+.resume p {
+  z-index: 1;
+}
+
+.resume:hover {
+  color: #212121;
+}
+
+.resume:active {
+  border-color: teal;
+}
+
+.resume::after, .resume::before {
+  content: "";
+  position: absolute;
+  width: 8em;
+  aspect-ratio: 1;
+  background: mediumspringgreen;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.resume::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.resume::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.resume:hover:before {
+  transform: translateX(-1em);
+}
+
+.resume:hover:after {
+  transform: translateX(1em);
+}
+
+.resume:active:before,
+.resume:active:after {
+  background: teal;
+}
+
+.download-btn{
+  color: aliceblue;
+}
