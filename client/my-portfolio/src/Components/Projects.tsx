@@ -21,15 +21,7 @@ const projectsData = [
     githubUrl: 'https://github.com/tamil752002/sketch-book',
     liveUrl: 'https://sketch-book-taupe.vercel.app/'
   },
-  {
-    id: 3,
-    title: 'Task Management App',
-    description: 'A productivity application for managing tasks and projects with drag-and-drop functionality, deadlines, and team collaboration features.',
-    imageUrl: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-    githubUrl: 'https://github.com/tamil752002/task-manager',
-    liveUrl: '#'
-  }
+
 ];
 
 const Projects = () => {
