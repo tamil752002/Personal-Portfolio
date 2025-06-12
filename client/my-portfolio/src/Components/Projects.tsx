@@ -6,26 +6,77 @@ const projectsData = [
   {
     id: 1,
     title: 'Chat Application',
-    description: 'coming soon !',
-    imageUrl: '', // Replace with your image URL
+    description: 'A real-time chat application built with React and Node.js, featuring instant messaging, user authentication, and responsive design.',
+    imageUrl: chatimg,
+    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
+    githubUrl: 'https://github.com/tamil752002/chat-app',
+    liveUrl: '#'
+  },
+  {
+    id: 2,
+    title: 'Sketch Book',
+    description: 'An interactive digital drawing application that allows users to create, edit, and save sketches with various drawing tools and color options.',
+    imageUrl: 'https://images.pexels.com/photos/1053687/pexels-photo-1053687.jpeg?auto=compress&cs=tinysrgb&w=800',
+    technologies: ['React', 'Canvas API', 'JavaScript', 'CSS'],
+    githubUrl: 'https://github.com/tamil752002/sketch-book',
+    liveUrl: 'https://sketch-book-taupe.vercel.app/'
+  },
+  {
+    id: 3,
+    title: 'Task Management App',
+    description: 'A productivity application for managing tasks and projects with drag-and-drop functionality, deadlines, and team collaboration features.',
+    imageUrl: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
+    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
+    githubUrl: 'https://github.com/tamil752002/task-manager',
+    liveUrl: '#'
   }
-
 ];
 
 const Projects = () => {
   return (
     <div id="projects" className="projects-section">
-      <h2>Projects</h2>
+      <h2>My Projects</h2>
       <div className="projects-container">
         {projectsData.map((project) => (
           <div key={project.id} className="project-card">
-            <img
-              src={chatimg}
-              alt={project.title}
-              className="project-image"
-            />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <div className="project-image-container">
+              <img
+                src={project.imageUrl}
+                alt={project.title}
+                className="project-image"
+              />
+              <div className="project-overlay">
+                <div className="project-links">
+                  <a 
+                    href={project.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    GitHub
+                  </a>
+                  <a 
+                    href={project.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="project-content">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="project-technologies">
+                {project.technologies.map((tech, index) => (
+                  <span key={index} className="tech-tag">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         ))}
       </div>
