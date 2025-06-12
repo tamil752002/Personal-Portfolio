@@ -3,15 +3,7 @@ import '../styles/projects.css';
 import chatimg from "../assets/Chat.png"
 
 const projectsData = [
-  {
-    id: 1,
-    title: 'Chat Application',
-    description: 'A real-time chat application built with React and Node.js, featuring instant messaging, user authentication, and responsive design.',
-    imageUrl: chatimg,
-    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-    githubUrl: 'https://github.com/tamil752002/chat-app',
-    liveUrl: '#'
-  },
+
   {
     id: 1,
     title: 'Sketch Book',
