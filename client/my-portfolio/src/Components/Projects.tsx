@@ -13,7 +13,7 @@ const projectsData = [
     liveUrl: '#'
   },
   {
-    id: 2,
+    id: 1,
     title: 'Sketch Book',
     description: 'An interactive digital drawing application that allows users to create, edit, and save sketches with various drawing tools and color options.',
     imageUrl: 'https://images.pexels.com/photos/1053687/pexels-photo-1053687.jpeg?auto=compress&cs=tinysrgb&w=800',
