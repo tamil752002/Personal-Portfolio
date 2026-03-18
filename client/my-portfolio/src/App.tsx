@@ -6,6 +6,7 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Skills from './Components/Skills';
 import About from './Components/About';
+console.log("app")
 
 function App() {
   return (
